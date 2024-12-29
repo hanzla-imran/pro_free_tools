@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <style>
+            body {
+                margin:0px;
+                padding:0px; 
+                background-color:#f8fafd; 
+                overflow: hidden;
+            }
+            .main {
+                width: 100%; 
+                font-family: Roboto, Arial, sans-serif;  
+            }
+            .nav-bar {
+                width: 100%; 
+                display: inline-flex; 
+            }
+            .logo {
+                width: 24%;
+                display: flex;
+            }
+            .logo img {
+                width: 14%;
+                padding-left: 26px;
+                padding-top: 12.5px;
+                height: 36px;
+            }
+            .pl-10 {
+                padding-left: 10px;
+                font-size: 22px;
+                margin-top: 20px;
+            }
+            .input-search {
+                width: 55.5%;
+               
+            }
+            .bx-w {
+                border: none;
+                background-color: #e9eef6;
+                border-radius:30px;
+                display:flex;
+                align-items:center;
+                padding: 20px;
+                height: 4px;
+                margin-top: 8px;
+            }
+            .bx-w:active {
+                background-color:white;
+                border:none;
+                box-shadow: 0px 0px 2.5px 0.5px grey;
+            }
+            .bx-w input {
+                flex:1px;
+                height:40px;
+                background-color: #e9eef6;
+                border: none;
+                outline: none;
+                font-size: 16px;
+                padding: 16px;
+            }
+            .bx-w input:active {
+               background-color:white;
+            }
+            .bx-w img {
+                width: 3.5%;
+            }
+            .end-bar {
+                width: 20.5%;
+            }
+            .icon-3 {
+                height: 54px;
+                display: flex;
+                align-items: center;
+                gap: 22px;
+                padding-left: 42px;
+                padding-top: 5px;
+            }
+            .icon-3 img {
+                width: 11%;
+            }
+            .as-w {
+                width: 100%;
+                display: flex;
+            }
+            .side-bar {
+                width:24%;
+                height: 422px;
+                display: inline-grid;  
+            }
+            .btn {
+                height: 86px;
+                
+                width: 100%;
+            }
+            .btn button {
+                margin-left: 14px;
+                border: none;
+                background-color: white;
+                width: 42%;
+                margin-top: 12px;
+                height: 57px;
+                border-radius: 16px;
+                box-shadow: 1px 1px 2px 0px grey;
+            }
+            .sd-3 {
+                overflow: auto;
+                height: 340px;
+            }
+            .sd-3 ul{
+                margin: 0px;
+                padding: 0px;
+            }
+            .sd-3 li {
+                list-style-type:none;
+                margin-left: 16px;
+                padding: 6px;
+            }
+            .sd-3 li:hover {
+                background-color: #ebeee9;
+                border-radius: 20px;
+                width: 85%;
+            }
+            .br-20 {
+                border: none;
+                border-radius: 20px;
+                background-color: #c2e7fe;
+                width: 85%;
+            }
+            .sd-3 li a{
+                text-decoration: none;
+                color: black;
+                font-size: 14px;
+            }
+            .sd-3 li a img {
+                width:9%;
+            }
+            .sd-3 li progress {
+                height: 10px;
+                width: 90%;
+            }
+            .sd-3 li button {
+                height: 44px;
+                background-color: #f8fafd;
+                border: 1px solid black;
+                border-radius: 21px;
+                width: 73%;
+                color: #4a7cdc;
+                font-family: Roboto, Arial, sans-serif;
+                font-weight: 500;
+            }
+            .sd-3 span {
+                margin-left: 14px;
+                
+            }
+            .w-76 {
+                width: 74.5%;
+                background-color: white;
+                border-radius:18px;
+                margin-top: 3px;
+                box-shadow:1px 0px 1px -1px lightgrey;
+                height: 405px;
+                overflow: auto;
+            }
+            .p-f {
+                margin-left:18px;
+            }
+            
+     </style>
+ </head>
+ <body>
+       <div class="main">
+         <div class="nav-bar">
+            <div class="logo">
+              <img src="assets/img/google-drive.PNG" /><span class="pl-10">Drive</span>
+        </div>
+           <div class="input-search">
+            <div class="bx-w">
+              <img src="assets/img/search.png" />
+             <input type="search" placeholder="Search in Drive">
+               <img src="assets/img/equalizer.PNG" style="width:5%;" />
+          </div>
+         </div>
+            <div class="end-bar">
+                <div class="icon-3">
+                <img src="assets/img/question.PNG" />
+                 <img src="assets/img/setting.PNG" />
+                <img src="assets/img/noun-dot.PNG" />
+               <img src="assets/img/AS.JPG"  style="border-radius: 50px; width: 18%;" />
+              </div>
+            </div> 
+      </div> 
+         <div class="as-w">
+            <div class="side-bar">
+             <aside>
+            <div class="btn">
+               <button><span style="font-size: 32px; margin-left: 0px;">+</span> <sup style="font-size: 14px; margin-left: 13px;"> New </sup></button>
+      
+             </div>
+                <div class="sd-3">
+                  <ul>
+                <li class="br-20"> <a href="#"><img src="assets/img/ico.PNG" /><span>Home</span></a></li>
+                <li> <a href="MD-p.html"><img src="assets/img/gdrive.SVG" /><span>My Drive</span></a></li>
+               <li>  <a href= "#"><img src="assets/img/my drive.PNG" /> <span> Computers</span></a> </li>
+                 <li> <a href="#"> <img src="assets/img/group.PNG" /><span>Shared with me</span></a></li>
+                  <li> <a href="#"><img src="assets/img/history.PNG" /><span>Recent</span></a></li>
+                  <li><a href="#"><img src="assets/img/star.PNG" /><span>Starred</span></a></li>
+                 <li><a href="#"><img src="assets/img/spam-alert.PNG" /><span>Spam</span></a></li>
+                 <li><a href="#"><img src="assets/img/bin.PNG" /><span>Bin</span></a></li>
+                 <li><a href="#"><img src="assets/img/cloud.PNG" /><span>Storage</span></a></li>
+                 <li><progress id="file" value="3" max="100"> 32% </progress></li>
+                 <li>467.8 MB of 15 GB used</li>
+                 <li><button>Get more storage</button></li>
+                 </ul>
+               </div>
+           </aside>
+          </div>
+          <div class="w-76">
+                  </div>
+                  
+                
+ </body>
+</html>

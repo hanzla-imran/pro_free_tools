@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+<style>
+     body {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+ aside {
+  width: 200px;
+  height: 100vh;
+  background: #f8fafd;
+  position: fixed;
+
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  box-shadow: 3px 1px 5px 0px rgba(0, 0, 0, 0.75)
+}
+
+aside ul {
+  padding-inline-start: 0;
+}
+
+aside ul li {
+  list-style: none;
+  font-size: 18px;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+aside ul li .fas {
+  width: 50px;
+}
+
+.aside-wrapper {
+  padding: 0 14px;
+  box-sizing: border-box;
+}
+
+.logo-text {
+  font-size: 32px;
+  position: relative;
+  margin-left: 28px;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: -1px;
+  left: 214px;
+  background: #f8fafd;
+  padding: 4px 11px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input {
+  display: none;
+}
+
+/* Toggler Functionality */
+input:checked ~ aside {
+  left: -150px;
+}
+</style>
+</head>
+<body>
+    
+ <input type="checkbox" id="toggler" />
+<aside class="aside-wrapper">
+  <h1 class="logo-text"><span>G.Drive</span>
+    <label for="toggler"><i class="fas fa-bars sidebar-toggle"></i>
+      </label>
+        </h1>
+  
+  <ul>
+    <li> Home</li>
+    <li> My Drive</li>
+    <li> Computers</li>
+    <li> Legal</li>
+    <li> Recent</li>
+  </ul>
+
+  <ul>
+    <li> Get Help</li>
+    <li> Chat With Us</li>
+  </ul>
+</aside>
+</body>
+</html>

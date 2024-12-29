@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+   <link rel="icon" type="image/x-icon" href="pnc.PNG">
+    <style>
+                          * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: "Roboto", sans-serif;
+                background-color: white;
+                height: 100vh;
+                color: black;
+            }
+            .main{
+                display:inline-flex;
+            }
+            .slide{
+                position:fixed;
+                top:0px;
+            }
+            .sidepanel  {
+                width: 0;
+                position: fixed;
+                overflow:scroll;
+                z-index: 1;
+                height: 424px;
+                top: 0;
+                left: 0;
+                background-color: white;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+
+            .sidepanel a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 14px;
+                color: black;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidepanel a:hover {
+                color: #f1f1f1;
+            }
+
+            .sidepanel .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 25px;
+                margin-right:173px;
+            }
+            .pros{
+                border-bottom:1px solid lightgrey;
+                width:83%;
+                margin-left:19px;
+            }
+            .cron {
+                border-bottom:1px solid lightgrey;
+                width:83%;
+                margin-left:19px;
+            }
+            .mist {
+                border-bottom:1px solid lightgrey;
+                width:83%;
+                margin-left:19px;
+            }
+            .twist {
+                border-bottom:1px solid lightgrey;
+                width:83%;
+                margin-left:19px;
+            }
+            .openbtn {
+                font-size: 23px;
+                cursor: pointer;
+                background-color:white;
+                color: black;
+                padding: 10px 15px;
+                border: none;
+                border-radius:8px;
+            }
+            .openbtn:hover {
+                background-color:lightgrey;
+            }
+            .sidebar {
+                width: 80px;
+                height: 100%;
+                padding: 16px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+                margin-top: -21px;
+            }
+
+            .menu-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 8px;
+                cursor: pointer;
+                border-radius: 50%;
+            }
+        
+
+            .sidebar-items {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 16px 2px;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+            .item:hover {
+                background-color: lightgrey;
+            }
+            .item img {
+                width: 20px;
+                height: 21px;
+                margin-bottom: 6px;
+            }
+            .item span {
+                font-size: 11px;
+            }
+            .brid {
+                width:91%;
+                margin-left:90px;
+                position:fixed;
+                top:0px;
+                height: 113px;
+                background-color: white;
+           }
+           nav ul  {
+                display:inline-flex;
+                list-style-type:none;
+           }
+           .n1 {
+                margin-left: -19px;
+                margin-top:18px;
+           }
+           .n1 img {
+                width:15%;
+           }
+           .n2 input{
+               margin-left: -433px;
+               padding: 18px;
+               height: 40px;
+               width: 433px;
+               border-radius: 31px 0px 0px 31px;
+               border: 1px solid lightgrey;
+               font-size: 16px;
+               margin-top: 8px;
+           }
+           .n2 input[type="search"]:focus {
+               border: 1px solid red;
+           }
+           .n3 img {
+                height:20px;
+           }
+           .n3 button {
+                margin-right:21px;
+                width: 64px;
+                margin-top: 8px;
+                height: 40px;
+                border: 1px solid lightgrey;
+                border-radius: 0px 31px 31px 0px;
+           }
+           .n4 img {
+                height:21px;
+           }
+           .n4 button {
+                margin-right:62px;
+                margin-top: 7px;
+                width: 39px;
+                border-radius: 100px;
+                height: 40px;
+                border: 1px solid lightgrey;
+           }
+           .n5 li {
+                margin-right:88px;
+                margin-top:14px;
+           }
+           .n5 img{
+                height: 21px;
+           }
+           .n6 li {
+                margin-right: 29px;
+                margin-top:9px;
+           }
+           .n6 img {
+                height: 33px;
+           }
+           .news {
+                margin-top:19px;
+                margin-left: -57px;
+           }
+           .news nav ul li {
+               list-style-type:none;
+               display:inline-flex;
+               background-color: #e7e7e2;
+               margin-left: 57px;
+               border-radius: 12px;
+               padding: 18px;
+               padding-bottom: 6px;
+               padding-top: 7px;
+               margin-right: -49px;
+               font-family: Roboto, Arial, sans-serif;
+               font-size:14px;
+           }
+           .news nav ul li a{
+               text-decoration:none;
+               color:black;
+           }
+           .let {
+               display:inline-flex;
+           }
+           .con video{
+               width:85%;
+               margin-top: 116px;
+               margin-left: 97px;
+               border-radius: 15px;
+           }
+           .con video:hover {
+               border-radius:0px;
+           }
+           .pro video{
+               width:89%;
+               margin-top: 116px;
+               margin-left: 34px;
+               border-radius: 15px;
+           }
+           .pro video:hover {
+               border-radius:0px;
+           }
+           .tem {
+               display:inline-flex;
+               margin-top: -68px;
+           }
+           .jet video{
+               width:85%;
+               margin-top: 116px;
+               margin-left: 97px;
+               border-radius: 15px;
+           }
+           .jet video:hover {
+               border-radius:0px;
+           }
+           .put video{
+               width:89%;
+               margin-top: 116px;
+               margin-left: 34px;
+               border-radius: 15px;
+           }
+           .put video:hover {
+               border-radius:0px;
+           }
+    </style>
+</head>
+<body>
+   
+    <div id="mySidepanel" class="sidepanel"  >
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">☰  <img src="yt 1.PNG" style="width:424%; float:right; margin-right: -159px; margin-top: 8px;"></a>
+         <a href="#"><img src="ico.PNG" style="height:21px; width:20px;" /><span style="margin-left:37px;"> Home</span></a>
+           <a href="#"><img src="y s.PNG" alt="home" style="height:20px; width:21px;"  /><span style="margin-left:37px;"> Shorts</span></a>
+            <a href="#"><img src="youtube.PNG" alt="home"  style="height:21px; width:22px;" /><span style="margin-left:37px;"> subscriptions</span></a>
+            <div class="pros"></div>
+             <a href="#"><b>you > </b></a>
+           <a href="#"><img src="channel.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">Your channel</span></a>
+        <a href="#"><img src="history.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">History</span></a>
+      <a href="#"><img src="play.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">Playlists</span></a>
+    <a href="#"><img src="vio.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">Your videos</span></a>
+  <a href="#"><img src="clock.WEBP" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">Watch Later</span></a>
+   <a href="#"><img src="like.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">Liked Videos</span></a>
+
+<div class="cron"></div>
+     <a href="#"><span ><b>Explore</b></span></a>
+    <a href="#"><img src="trending.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">Trending</span></a>
+    <a href="#"><img src="music.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">Music</span></a>
+    <a href="#"><img src="game-console.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">Gaming</span></a>
+    <a href="#"><img src="news.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">News</span></a>
+    <a href="#"><img src="trophy.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">Sport</span></a>
+  <a href="#"><span ><b>More from YouTube</b></span></a>
+     <a href="#"><img src="pnc.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">YouTube Premium</span></a>
+     <a href="#"><img src= "ici.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">YouTube Studio</span></a>
+     <a href="#"><img src= "youtube-music.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">YouTube Music</span></a>
+     <a href="#"><img src= "yt kids.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">YouTube Kids</span></a>
+    <div class="mist"></div>
+   <a href="#"><img src= "setting.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">Settings</span></a>
+   <a href="#"><img src= "flag.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">Report history</span></a>
+   <a href="#"><img src= "question.PNG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">Help</span></a>
+   <a href="#"><img src= "feedback.SVG" alt="home" style="height:21px; width:20px;"  /><span style="margin-left:37px;">Send feedback</span></a>
+    <div class="twist"></div>
+      <a href="#"><span style="font-size:89%;"><b>About Press Copyright <br> Contact us Creator Advertise <br>Developers</b></span></a>
+      <a href="#"><span style="font-size:89%;"><b>Terms Privacy Policy&Safety<br>
+                            How YouTube works<br>
+                            Test new features</b></span></a>
+       <a href="#"><span style="font-size:85%;"><small>&#169;2024 Google LLC</small></span></a>
+</div>
+         <div class="main">
+            <div class="slide">
+             <aside class="sidebar">
+           <div class="menu-btn">
+    
+            <button class="openbtn" onclick="openNav()">☰ </button>  
+         </div>
+
+      <div class="sidebar-items">
+       <div class="item">
+        <img src="ico.PNG" />
+        <span>Home</span>
+    </div>
+    <div class="item">
+        <img src="y s.PNG" alt="home" />
+        <span>Shorts</span>
+    </div>
+    <div class="item">
+        <img src="youtube.PNG" alt="home" />
+        <span>Subscriptions</span>
+    </div>
+    <div class="item">
+        <img src="library.PNG" alt="home" />
+        <span>You</span>
+    </div>
+</div>
+        <script>
+           function openNav() {
+           document.getElementById("mySidepanel").style.width = "264px";
+           }
+
+           function closeNav() {
+           document.getElementById("mySidepanel").style.width = "0";
+           }
+     </script>
+   </aside> 
+      </div>
+        <div class="brid">
+         <div>
+        <nav>
+            <ul>
+                <div class="n1"><li><img src="you t.png"  /></li></div>
+               <div class="n2"> <li><input  type="search" placeholder="Search" ></li></div>
+                <div class="n3"><li ><button><img src="icons8.PNG" /></button></li></div>
+                <div class="n4"><li ><button><img src="voice.PNG"  /></button></li></div>
+                
+                <div class="n6"><li ><img src="video.PNG" /></li></div>
+                <div class="n5"> <li ><img src="bll.PNG"  /></li></div>
+            </ul>
+        </nav>
+        </div>
+         <div class="news">
+          <nav>
+        <ul>
+           <li><a href="#">All</a></li>
+           <li><a href="#">Music</a></li>
+           <li><a href="#">News</a></li>
+           <li><a href="#">Calisthenics</a></li>
+           <li><a href="#">Notcoin</a></li>
+           <li><a href="#">live</a></li>
+           <li><a href="#">Gaming</a></li>
+           <li><a href="#">Action Thrillers</a></li>
+           <li><a href="#">Monetization</a></li>
+           
+       </ul>
+   </nav>
+        </div>
+       </div>
+     </div>
+          <div class="let">
+            <div class="con">
+                <a href="button.html" target="_blank">
+               <video controls>
+                   <source src="AI.mp4" type="video/mp4">
+               </video>
+                </a>
+                       <h3 style="margin-left:179px; margin-top:21px;">Artificial Intelligence Full Course <img src="td.PNG" style="width:20px; margin-left:13px;" /></h3>
+                    <img src="im.JPEG" style="width:8.5%; height:43px; border-radius:100%; margin-left:116px; margin-top:-14px;">
+                       <p style="margin-left:178px; margin-top:-31px;">edureka! <img src="tk.PNG" style="width:4%;"></p>
+                       <p style="margin-left:179px; margin-top:-2px;"><small>3.7M views   5 years ago</small></p>
+              </div>
+            <div class="pro">
+                <a href="button.html" target="_blank">
+               <video controls>
+                   <source src="AI.mp4" type="video/mp4">
+               </video>
+                </a>
+                       <h3 style="margin-left:120px; margin-top:21px;">Artificial Intelligence Full Course <img src="td.PNG" style="width:20px; margin-left:13px;" /></h3>
+                   <img src="im.JPEG" style="width:8.5%; height:43px; border-radius:100%; margin-left:58px; margin-top:-17px;">
+                      <p style="margin-left:121px; margin-top:-26px;">edureka! <img src="tk.PNG" style="width:4%;"></p>
+                      <p style="margin-left:122px; margin-top:-1px;"><small>3.7M views   5 years ago</small></p>
+           </div>
+         </div>
+             <div class="tem">
+            <div class="jet">
+                <a href="button.html" target="_blank">
+               <video controls>
+                   <source src="AI.mp4" type="video/mp4">
+               </video>
+                </a>
+                       <h3 style="margin-left:179px; margin-top:21px;">Artificial Intelligence Full Course <img src="td.PNG" style="width:20px; margin-left:13px;" /></h3>
+                   <img src="im.JPEG" style="width:8.5%; height:43px; border-radius:100%; margin-left:116px; margin-top:-14px;">
+                     <p style="margin-left:178px; margin-top:-31px;">edureka! <img src="tk.PNG" style="width:4%;"></p>
+                     <p style="margin-left:179px; margin-top:-2px;"><small>3.7M views   5 years ago</small></p>
+              </div>
+            <div class="put">
+                <a href="button.html" target="_blank">
+               <video controls>
+                   <source src="AI.mp4" type="video/mp4">
+               </video>
+                </a>
+                      <h3 style="margin-left:120px; margin-top:21px;">Artificial Intelligence Full Course <img src="td.PNG" style="width:20px; margin-left:13px;" /></h3>
+                 <img src="im.JPEG" style="width:8.5%; height:43px; border-radius:100%; margin-left:58px; margin-top:-17px;">
+                      <p style="margin-left:121px; margin-top:-26px;">edureka! <img src="tk.PNG" style="width:4%;"></p>
+                      <p style="margin-left:122px; margin-top:-1px;"><small>3.7M views   5 years ago</small></p>
+           </div>
+         </div>
+ </body>
+</html>

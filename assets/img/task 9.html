@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+        body {
+             margin: 0px;
+             padding: 0px;
+             color: #333;
+             background: #f1f1f1;
+             font-size: 16px;
+             font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
+             }
+        .main-nav {
+             width: 100%;
+             background-color: #FFFFFF;
+             display: flex;
+             height: 79px;
+             text-align: center;
+             position: fixed;
+             }
+
+       @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .main-nav {
+                         display: none;
+                        }
+              }
+        .start-nav {
+             width: 25%;
+             }
+        .start-nav img {
+             width: 144px;
+             margin-top: 24px;
+             }
+        .end-nav {
+             width: 75%;
+             padding: 24px;
+             }
+        .dropbtn {
+            color: black;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            width: 20px;
+            height: 0px;
+            margin-top: -9px;
+            margin-left: -65px;
+            }
+
+       .dropdown {
+           position: relative;
+           display: inline-block;
+            }
+
+       .dropdown-content {
+           display: none;
+           position: absolute;
+           background-color: #f9f9f9;
+           min-width: 160px;
+           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+           z-index: 1;
+           column-count: 3;
+           column-gap: 40px;
+           column-rule: 1px solid lightgrey;
+           height: 555px;
+           }
+       .dropdown-content ul {
+           margin-top: 0px;
+           }
+       .dropdown-content li {
+           list-style-type: none;
+           margin-left: -40px;
+           height: 34px;
+           }
+       .dropdown-content li a {
+           color: black;
+           padding: 12px 16px;
+           text-decoration: none;
+           display: flex;
+           }
+        .dropdown-content li a img {
+           width: 17px;
+           padding: 0px;
+           margin-top: 6px;
+           }
+
+        .dropdown-content li a span {
+           margin-left: 4px;
+           }
+
+       /*  .dropdown-content a:hover {
+              background-color: #f1f1f1
+              }   */
+
+          .dropdown:hover .dropdown-content {
+              display: block;
+              margin-top: 33px;
+              margin-left: -582px;
+              width: 933px;
+             }
+
+      /*  .dropdown:hover .dropbtn {
+             background-color: #3e8e41;
+             }    */
+
+          
+        .mobile-container {
+             display: none;
+             
+             }
+
+     @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .mobile-container {
+                        display: block;
+                        position: fixed;
+                        
+                       }
+               }
+        .topnav {
+             overflow: hidden;
+             background-color: white;
+             position: relative;
+             width: 375px;
+             }
+
+        .topnav #myLinks {
+             display: none;
+             margin-top: 6px;
+            }
+
+        .topnav a {
+             color: black;
+             padding: 14px 16px;
+             text-decoration: none;
+             font-size: 17px;
+             display: block;
+            }
+
+        .topnav a.icon {
+  
+             color: black;
+             display: block;
+             position: absolute;
+             left: 0;
+             top: 0;
+            }
+
+        .topnav a:hover {
+             
+             color: black;
+            }
+
+        .active {
+             
+             color: white;
+             
+            }
+        .d-flex {
+             display: flex;
+             width: 100%;
+             }
+        .d-flex-w-1 {
+             width: 10%;
+             }
+        .d-flex-w-2 {
+             width: 30%;
+             }
+        .d-flex-w-3 {
+             width: 15%;
+             }
+        .d-flex-w-4 {
+             width: 15%;
+             }
+        .d-flex-w-5 {
+             width: 20%;
+             }
+        main {
+             background-color: #f5f7fd;
+             margin-top: -18px;
+             width: 100%;
+             }
+        .back-col {
+            
+             }
+        .back-col h3 {
+             text-align: center;
+             padding-top: 159px;
+             font-weight: 500;
+             }
+         section {
+             margin-left: 57px;
+             }
+         .btns-1 {
+             display: flex;
+             margin-top: 34px;
+             }
+
+      @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-1 {
+                         display: block;
+                        }
+              }
+         .btns-2 {
+             display: flex;
+             }
+
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-2 {
+                         display: block;
+                        }
+              }
+         .btn-1 {
+             width: 24%;
+             }
+         .btn-2 {
+             width: 24%;
+             }
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-2 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-3 {
+             width: 24%;
+             }
+         @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-3 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-4 {
+             width: 24%;
+             }
+            @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-4 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-5 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-6 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-7 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-8 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-9 {
+             margin-top: 20px;
+             }
+        .back-col-2 {
+             padding-top: 18px;
+             }
+        .back-col-2 h3 {
+             text-align: center;
+             font-weight: 500;
+             }
+         section {
+             margin-left: 57px;
+             }
+         .btns-1-2 {
+             display: flex;
+             margin-top: 36px;
+             }
+
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-1-2 {
+                         display: block;
+                        }
+              }
+         .btns-2-2 {
+             display: flex;
+             }
+
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-2-2 {
+                         display: block;
+                        }
+              }
+         .btn-1-2 {
+             width: 24%;
+             }
+         .btn-2-2 {
+             width: 24%;
+             }
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-2-2 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-3-2 {
+             width: 24%;
+             }
+         @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-3-2 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-4-2 {
+             width: 24%;
+             }
+            @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-4-2 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-5-2 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-6-2 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-7-2 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-8-2 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-9-2 {
+             margin-top: 20px;
+             }
+
+          .back-col-3 {
+             padding-top: 18px;
+             }
+        .back-col-3 h3 {
+             text-align: center;
+             font-weight: 500;
+             }
+         section {
+             margin-left: 57px;
+             }
+         .btns-1-3 {
+             display: flex;
+             margin-top: 36px;
+             }
+
+      @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-1-3 {
+                         display: block;
+                        }
+              }
+         .btns-2-3 {
+             display: flex;
+             }
+
+         @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-2-3 {
+                         display: block;
+                        }
+              }
+         .btn-1-3 {
+             width: 24%;
+             }
+       
+         .btn-2-3 {
+             width: 24%;
+             }
+         @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-2-3 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-3-3 {
+             width: 24%;
+             }
+       @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-3-3 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-4-3 {
+             width: 24%;
+             }
+         @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-4-3 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-5-3 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-6-3 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-7-3 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-8-3 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-9-3 {
+             margin-top: 20px;
+             display: block;
+             }
+
+            @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btn-9-3 {
+                         display: none;
+                        }
+              }
+
+         .back-col-4 {
+             padding-top: 18px;
+             }
+        .back-col-4 h3 {
+             text-align: center;
+             font-weight: 500;
+             }
+         section {
+             margin-left: 57px;
+             }
+         .btns-1-4 {
+             display: flex;
+              margin-top: 36px;
+             }
+
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-1-4 {
+                         display: block;
+                        }
+              }
+         .btns-2-4 {
+             display: flex;
+             }
+
+         @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-2-4 {
+                         display: block;
+                         
+                        }
+              }
+         .btn-1-4 {
+             width: 24%;
+             }
+         .btn-2-4 {
+             width: 24%;
+             }
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-2-4 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-3-4 {
+             width: 24%;
+             }
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-3-4 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-4-4 {
+             width: 24%;
+             }
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-4-4 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-5-4 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-6-4 {
+             width: 24%;
+             margin-top: 20px;
+             }
+
+         .back-col-5 {
+             padding-top: 18px;
+             }
+        .back-col-5 h3 {
+             text-align: center;
+             font-weight: 500;
+             }
+         section {
+             margin-left: 57px;
+             }
+         .btns-1-5 {
+             display: flex;
+              margin-top: 36px;
+             }
+
+       @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-1-5 {
+                         display: block;
+                        }
+              }
+         .btns-2-5 {
+             display: flex;
+             }
+
+          @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-2-5 {
+                         display: block;
+                        }
+              }
+         .btn-1-5 {
+             width: 24%;
+             }
+         .btn-2-5 {
+             width: 24%;
+             }
+         @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-2-5 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-3-5 {
+             width: 24%;
+             }
+           @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-3-5 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-4-5 {
+             width: 24%;
+             }
+         @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-4-5 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-5-5 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-6-5 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-7-5 {
+             width: 24%;
+             margin-top: 20px;
+             }
+
+
+         .back-col-6 {
+             padding-top: 18px;
+             }
+        .back-col-6 h3 {
+             text-align: center;
+             font-weight: 500;
+             }
+         section {
+             margin-left: 57px;
+             }
+         .btns-1-6 {
+             display: flex;
+              margin-top: 36px;
+             }
+
+     @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-1-6 {
+                         display: block;
+                        }
+              }
+         .btns-2-6 {
+             display: flex;
+             }
+
+      @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-2-6 {
+                         display: block;
+                        }
+              }
+         .btns-3-6 {
+             display: flex;
+             }
+
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-3-6 {
+                         display: block;
+                        }
+              }
+         .btn-1-6 {
+             width: 24%;
+             }
+         .btn-2-6 {
+             width: 24%;
+             }
+      @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-2-6 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-3-6 {
+             width: 24%;
+             }
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-3-6 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-4-6 {
+             width: 24%;
+             }
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-4-6 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-5-6 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-6-6 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-7-6 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-8-6 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-9-6 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-10-6 {
+             width: 24%;
+             margin-top: 20px;
+             }
+
+           .back-col-7 {
+             padding-top: 18px;
+             }
+        .back-col-7 h3 {
+             text-align: center;
+             font-weight: 500;
+             }
+         section {
+             margin-left: 57px;
+             }
+         .btns-1-7 {
+             display: flex;
+             margin-top: 36px;
+             }
+
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-1-7 {
+                         display: block;
+                        }
+              }
+         .btns-2-7 {
+             display: flex;
+             }
+
+         @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-2-7 {
+                         display: block;
+                        }
+              }
+         .btns-3-7 {
+             display: flex;
+             }
+
+           @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-3-7 {
+                         display: block;
+                        }
+              }
+         .btn-1-7 {
+             width: 24%;
+             }
+         .btn-2-7 {
+             width: 24%;
+             }
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-2-7 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-3-7 {
+             width: 24%;
+             }
+       @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-3-7 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-4-7 {
+             width: 24%;
+             }
+       @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-4-7 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-5-7 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-6-7 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-7-7 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-8-7 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-9-7 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-10-7 {
+             width: 24%;
+             margin-top: 20px;
+             }
+          .btn-11-7 {
+             width: 24%;
+             margin-top: 20px;
+             }
+
+          .back-col-8 {
+             padding-top: 18px;
+             }
+        .back-col-8 h3 {
+             text-align: center;
+             font-weight: 500;
+             }
+         section {
+             margin-left: 57px;
+             }
+         .btns-1-8 {
+             display: flex;
+             margin-top: 36px;
+             }
+
+         @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-1-8 {
+                         display: block;
+                        }
+              }
+         .btns-2-8 {
+             display: flex;
+             }
+
+           @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-2-8 {
+                         display: block;
+                        }
+              }
+         .btn-1-8 {
+             width: 24%;
+             }
+         .btn-2-8 {
+             width: 24%;
+             }
+          @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-2-8 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-3-8 {
+             width: 24%;
+             }
+         @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-3-8 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-4-8 {
+             width: 24%;
+             }
+         @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-4-8 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-5-8 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-6-8 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-7-8 {
+             width: 24%;
+             margin-top: 20px;
+             }
+
+
+          .back-col-9 {
+            padding-top: 18px;
+             }
+        .back-col-9 h3 {
+             text-align: center;
+             font-weight: 500;
+             }
+         section {
+             margin-left: 57px;
+             }
+
+      @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                     section {
+                              padding-bottom: 92px;
+                           }
+                }
+         .btns-1-9 {
+             display: flex;
+              margin-top: 36px;
+             }
+
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-1-9 {
+                         display: block;
+                        }
+              }
+         .btns-2-9 {
+             display: flex;
+             }
+
+           @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .btns-2-9 {
+                         display: block;
+                        }
+              }
+         .btn-1-9 {
+             width: 24%;
+             }
+         .btn-2-9 {
+             width: 24%;
+             }
+       @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-2-9 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-3-9 {
+             width: 24%;
+             }
+          @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-3-9 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-4-9 {
+             width: 24%;
+             }
+          @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                    .btn-4-9 {
+                          margin-top: 12px;
+                         }
+               }
+         .btn-5-9 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-6-9 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-7-9 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-8-9 {
+             width: 24%;
+             margin-top: 20px;
+             }
+         .btn-9-9 {
+             margin-top: 20px;
+             }
+         button {
+             border: none;
+             background-color: white;
+             height: 107px;
+             width: 212px;
+             border-radius: 20px 20px 20px 20px;
+             line-height: 12px;
+             box-shadow: 38px 45px 93px -10px rgb(0 0 0 / 5%);
+             }
+
+      @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                   button {
+                           width: 345px;
+                           margin-left: -43px;
+                           height: 131px;
+                         }
+                }
+         button:hover {
+             box-shadow: 25px 25px 81px 0px rgb(250 245 203 / 60%);
+             }
+         button img {
+             width: 30px;
+             padding: 17px;
+             }
+      @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                 button img {
+                             width: 55px;
+                           }
+                }
+         button h5 {
+             font-size: 16px;
+             font-weight: 500;
+             margin-top: -4px;
+             line-height: 19px;
+             }
+         footer {
+             background-color: #212121;
+               width: 100%;
+             }
+
+     
+      
+         footer img {
+             width: 144px;
+             margin-top: 24px;
+            
+             }
+
+        @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                 footer img {
+                             margin-top: 65px;
+                             margin-left: 18px;
+                           }
+                }
+          footer p {
+             color: white;
+             letter-spacing: normal;
+             line-height: 24px;
+             /* color: #333; */
+             font-weight: 500;
+             font-size: 16px !important;
+             text-align: justify !important;
+             word-spacing: 5px;
+             width: 214px;
+             }
+       @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                     footer p {
+                               margin-left: 18px;
+                               width: 342px;
+                               word-spacing: 10px;
+                             }
+                 }
+          .foot-er {
+             display: flex;
+             background-image: url('assets/img/foot-img.PNG');
+             background-size: contain;
+             padding-bottom: 45px;
+             }
+
+       @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                  .foot-er {
+                         display: block;
+                        }
+              }
+          ul {
+             list-style-type: none;
+             }
+       @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                       ul {
+                           margin-left: -20px;
+                          }
+                 }
+          li {
+             color: white;
+             line-height: 32px;
+             cursor: pointer;
+             }
+          li:hover {
+             color: #ffca2a;
+             }
+          li p {
+             border: 1px solid #ffca2a;;
+             width: 40px;
+             margin-left: 3px;
+             margin-top: 8px;
+             }
+          .m-l-1 {
+             margin-left: 58px;
+             margin-top: 35px;
+             }
+   @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                .m-l-1 {
+                        margin-left: 0px;
+                        margin-top: 0px;
+                      }
+                .m-l-2 ul {
+                       width: 322px;
+                      }
+               }
+          .m-l-2 {
+             margin-top: 35px;
+             }
+          .footer-end {
+             display: flex;
+             margin-top: 38px;
+             padding-bottom: 38px;
+             background-color: #262626;
+             }
+       @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                      .footer-end {
+                               display: block;
+                               
+                               }
+                  }
+          .star-f-e {
+             width: 50%;
+             }
+          .star-f-e ul {
+              display: flex;
+              margin-left: 17px;
+             }
+          .star-f-e ul li {
+              width: 9%;
+             }
+          .star-f-e li a:hover {
+              color: #ffca2a;
+             }
+        
+       @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                      .star-f-e ul li {
+                                       width: 30%;
+                                      }
+                  }
+          .star-f-e ul li img {
+              width: 18px;
+             }
+          .end-f-e {
+              width: 50%;
+              margin-top: 24px;
+             }
+           .end-f-e p {
+              width: 466px;
+              word-spacing: 1px;
+              font-weight: 400;
+              margin-left: 59px;
+             }
+       @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                 .end-f-e p {
+                             width: 212px;
+                             margin-left: 54px;
+                           }
+               }
+            .w-134 p {
+                width: 134px;
+                float: inline-end;
+                margin-top: -16px;
+               }
+     @media only screen and (max-width: 450px) {
+             /* For tablets: */
+                 .list-h {
+                           height: 40px;
+                      }
+            }  
+</style>
+</head>
+<body> 
+      
+       <nav>
+           <div class="main-nav">
+            <div class="start-nav">
+                <img src="assets/img/pro-2.WEBP" />
+              </div>
+            <div class="end-nav">
+                <div class="d-flex">
+                 <div class="d-flex-w-1">
+                 <span>HOME</span>
+                    </div>
+                <div class="d-flex-w-2"> 
+                          <span>PLAGIARISM CHECKER</span> 
+                            </div>
+                 <div class="d-flex-w-3">
+                             <div class="dropdown">
+                          <button class="dropbtn" style="display: flex;"><span>TOOLS</span>  <i class="fa fa-caret-down" style="margin-left:8px; margin-top: -2px;"></i></button>
+                       <div class="dropdown-content">
+                               <ul>
+                             <li><a href="#" style="color:#ffca2a; font-weight: 500;">OTHER TOOLS ></i></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/1.PNG" /><span>Tags Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/2.PNG" /><span>Slug Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/3.PNG" /><span>Meta Tags Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/4.PNG" /><span>Robots.txt Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/5.PNG" /><span>MD5 Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/6.PNG" /><span>Bcrypt Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/7.PNG" /><span>QR Code Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/8.PNG" /><span>Title Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/9.PNG" /><span>Keywords  <span style="color: red;">(coming soon..)</span></span></a></li>
+                            
+                               </ul>
+
+                            <ul>
+                             <li><a href="#" style="color:#ffca2a; font-weight: 500;">OTHER TOOLS</a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/10.PNG" /><span>Color From Image</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/11.PNG" /><span>Password Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/12.PNG" /><span>Barcode Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/13.PNG" /><span>Extract Zip File</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/14.PNG" /><span>Zip File Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/15.PNG" /><span>GIF To Image Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/16.PNG" /><span>GIF Make Generator</span></a></li>
+                            
+                            
+                               </ul>
+
+                           <ul style="margin-top: 80px;">
+                             <li><a href="#" style="color:#ffca2a; font-weight: 500;">EDIT IMAGE</a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/17.PNG" /><span>Image Rotate Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/18.PNG" /><span>Image Crop Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/19.PNG" /><span>Image Resize Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/20.PNG" /><span>Image To JPG Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/21.PNG" /><span>Image Crop Circle Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/22.PNG" /><span>Compress PNG Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/23.PNG" /><span>Compress JPG Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/24.PNG" /><span>Compress JPEG Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/25.PNG" /><span>Compress WEBP Generator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/26.PNG" /><span>Compress BMP Generator</span></a></li>
+                            
+                               </ul>
+                          </div>
+                            </div>
+                              </div>
+                 <div class="d-flex-w-4">
+                   <div class="dropdown">
+                          <button class="dropbtn" style="display: flex;"><span>CALCULATORS</span>  <i class="fa fa-caret-down" style="margin-left:8px; margin-top: -2px;"></i></button>
+                       <div class="dropdown-content" style="margin-left: -667px;">
+                             <ul>
+                             <li><a href="#" style="color:#ffca2a; font-weight: 500;">BUSINESS CALCULATOR</a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/27.PNG" /><span>Loan Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/28.PNG" /><span>Millionaire Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/29.PNG" /><span>Savings Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/30.PNG" /><span>Breakeven Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/31.PNG" /><span>Gross Profit Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/32.PNG" /><span>How... Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/33.PNG" /><span>Lifetime Value</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/34.PNG" /><span>Marketing Profitability</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/35.PNG" /><span>Mark.. Converter</span></a></li>
+                            
+                               </ul>
+
+                            <ul>
+                             <li><a href="#" style="color:#ffca2a; font-weight: 500;">TAX CALCULATOR</a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/36.PNG" /><span>Payroll Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/37.PNG" /><span>Car and Fuel</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/38.PNG" /><span>CIS Tax Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/39.PNG" /><span>Fuel Cost Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/40.PNG" /><span>Incorporation Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/41.PNG" /><span>Inheritance Tax</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/42.PNG" /><span>VAT Calculator</span></a></li>
+                             <li><a href="#"><img src="assets/img/assets/img/43.PNG" /><span>VAT Flat Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/assets/img/44.PNG" /><span>Capital Gains</span></a></li>
+                            
+                            
+                               </ul>
+
+                           <ul style="margin-top: 80px;">
+                             <li><a href="#" style="color:#ffca2a; font-weight: 500;">HEALTH AND FITNESS</a></li>
+                            <li><a href="#"><img src="assets/img/45.PNG" /><span>BMI Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/46.PNG" /><span>Calorie Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/47.PNG" /><span>Body Fat Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/48.PNG" /><span>BMR Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/49.PNG" /><span>Ideal Weight Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/50.PNG" /><span>Pace Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/51.PNG" /><span>Pregancy & Conception</span></a></li>
+                            <li><a href="#"><img src="assets/img/52.PNG" /><span>Due Date</span></a></li>
+                            
+                            
+                               </ul>
+                          </div>
+                            </div>
+                        </div>
+                 <div class="d-flex-w-5">
+                         <div class="dropdown">
+                          <button class="dropbtn" style="margin-left: 2px; display: flex;"><span> OTHERS </span>  <i class="fa fa-caret-down" style="margin-left:8px; margin-top: -2px;"></i></button>
+                       <div class="dropdown-content" style="margin-left: -770px; column-count: 4;">
+                             <ul>
+                             <li><a href="#" style="color:#ffca2a; font-weight: 500;">MATH CACULATOR</a></li>
+                            <li><a href="#"><img src="assets/img/53.PNG" /><span>Scientific Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/54.PNG" /><span>Fraction Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/55.PNG" /><span>Percentage </span></a></li>
+                            <li><a href="#"><img src="assets/img/56.PNG" /><span>Random Number</span></a></li>
+                            <li><a href="#"><img src="assets/img/57.PNG" /><span>Triangle Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/58.PNG" /><span>S.D Calculator</span></a></li>
+                            
+                            
+                               </ul>
+
+                            <ul style="margin-top: 140px;">
+                             <li><a href="#" style="color:#ffca2a; font-weight: 500;">CALCULATOR</a></li>
+                            <li><a href="#"><img src="assets/img/59.PNG" /><span>Salary Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/60.PNG" /><span>Sales Tax Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/61.PNG" /><span>Interest Rate </span></a></li>
+                            <li><a href="#"><img src="assets/img/1.PNG" /><span>Amortiztion </span></a></li>
+                            <li><a href="#"><img src="assets/img/5.PNG" /><span>Inflation Calculator</span></a></li>
+                            <li><a href="#"><img src="assets/img/7.PNG" /><span>Compound Interest</span></a></li>
+                               </ul>
+
+                         
+                            <ul style="margin-top: 113px;">
+                             <li><a href="#" style="color:#ffca2a; font-weight: 500;">CALCULATOR</a></li>
+                            <li><a href="#"><img src="assets/img/8.PNG" /><span>Income Tax</span></a></li>
+                            <li><a href="#"><img src="assets/img/11.PNG" /><span>Finance</span></a></li>
+                            <li><a href="#"><img src="assets/img/15.PNG" /><span>Investment</span></a></li>
+                            <li><a href="#"><img src="assets/img/19.PNG" /><span>Payment</span></a></li>
+                            <li><a href="#"><img src="assets/img/10.PNG" /><span>Loan</span></a></li>
+                            <li><a href="#"><img src="assets/img/22.PNG" /><span>Interest</span></a></li>
+                             <li><a href="#"><img src="assets/img/21.PNG" /><span>Auto Loan</span></a></li>
+                               </ul>
+
+                           <ul style="margin-top: 190px;">
+                             <li><a href="#" style="color:#ffca2a; font-weight: 500;">PDF TOOLS</a></li>
+                            <li><a href="#"><img src="assets/img/31.PNG" /><span>PDF to JPG</span></a></li>
+                            <li><a href="#"><img src="assets/img/33.PNG" /><span>PDF to PNG</span></a></li>
+                            <li><a href="#"><img src="assets/img/35.PNG" /><span>PDF to Word</span></a></li>
+                            <li><a href="#"><img src="assets/img/37.PNG" /><span>PDF to Powerpoint</span></a></li>
+                            <li><a href="#"><img src="assets/img/41.PNG" /><span>PDF to Excel</span></a></li>
+                            <li><a href="#"><img src="assets/img/43.PNG" /><span>PDF to TXT</span></a></li>
+                            <li><a href="#"><img src="assets/img/45.PNG" /><span>Image To PDF</span></a></li>
+                            <li><a href="#"><img src="assets/img/55.PNG" /><span>Word To PDF</span></a></li>
+                            <li><a href="#"><img src="assets/img/49.PNG" /><span>PowerPoint To PGF</span></a></li>
+                             <li><a href="#"><img src="assets/img/50.PNG" /><span>Excel To PDF</span></a></li>
+                               </ul>
+                          </div>
+                            </div>
+               </div>
+              </div>
+            </div>
+          </div>
+             <div class="mobile-container">
+
+
+<div class="topnav">
+  <a href="#home" class="active" style="margin-left: 101px; margin-top: -2px;"><img src="pro-2.WEBP" style="width: 139px;" /></a>
+  <div id="myLinks">
+    <a href="#news" style="padding: 6px 13px; font-size: 14px;"><span style="margin-left:3px;">HOME</span></a>
+     <p style="border-bottom: 1px solid lightgrey; width: 91%; margin-left: 16px; margin-top: 4px;"></p>
+    <a href="#contact" style="padding: 6px 13px; font-size: 14px; border-bottom: 1px solid lightgrey; width: 84%; margin-left: 16px;"><span style="margin-left:-13px;">PLAGIARISM CHECKER</span></a>
+     <p style="border-bottom: 1px solid lightgrey; margin-top: 1.5px; width: 91%; margin-left: 16px;"></p>
+    <a href="#about" style="padding: 6px 13px; font-size: 14px; border-bottom: 1px solid lightgrey; width: 84%; margin-left: 16px;"><span style="margin-left:-13px;">OTHER TOOLS <img src="right-arrow.PNG" style="width: 10px; margin-left: 225px;" /></span></a>
+      <p style="border-bottom: 1px solid lightgrey; margin-top: 1.5px; width: 91%; margin-left: 16px;"></p>
+     <a href="#news" style="padding: 6px 13px; font-size: 14px;">TAX CALCULATOR <img src="right-arrow.PNG" style="width: 10px; margin-left: 205px;" /></a>
+      <p style="border-bottom: 1px solid lightgrey; margin-top: 2px; width: 91%; margin-left: 16px;"></p>
+    <a href="#contact" style="padding: 6px 13px; font-size: 14px; border-bottom: 1px solid lightgrey; width: 84%; margin-left: 16px;"><span style="margin-left:-13px;">BUSINESS CALCULATOR <img src="right-arrow.PNG" style="width: 10px; margin-left: 164px;" /></span></a>
+       <p style="border-bottom: 1px solid lightgrey; margin-top: 1.5px; width: 91%; margin-left: 16px;"></p>
+    <a href="#about" style="padding: 6px 13px; font-size: 14px;">MATH CALCULATOR <img src="right-arrow.PNG" style="width: 10px; margin-left: 190px;" /></a>
+       <p style="border-bottom: 1px solid lightgrey; margin-top: 1.5px; width: 91%; margin-left: 16px;"></p>
+    <a href="#news" style="padding: 6px 13px; font-size: 14px;">HEATH AND FITNESS CALCULATORS <img src="right-arrow.PNG" style="width: 10px; margin-left: 92px;" /></a>
+       <p style="border-bottom: 1px solid lightgrey; margin-top: 1.5px; width: 91%; margin-left: 16px;"></p>
+    <a href="#contact" style="padding: 6px 13px; font-size: 14px; border-bottom: 1px solid lightgrey; width: 84%; margin-left: 16px;"><span style="margin-left:-13px;">CALCULATOR <img src="right-arrow.PNG" style="width: 10px; margin-left: 230px;" /></span></a>
+       <p style="border-bottom: 1px solid lightgrey; margin-top: 1.5px; width: 91%; margin-left: 16px;"></p>
+    <a href="#about" style="padding: 6px 13px; font-size: 14px;">OTHER TOOLS <img src="right-arrow.PNG" style="width: 10px; margin-left: 228px;" /></a>
+        <p style="border-bottom: 1px solid lightgrey; margin-top: 1.5px; width: 91%; margin-left: 16px;"></p>
+     <a href="#news" style="padding: 6px 13px; font-size: 14px; border-bottom: 1px solid lightgrey; width: 84%; margin-left: 16px;"><span style="margin-left:-13px;">EDIT IMAGE <img src="right-arrow.PNG" style="width: 10px; margin-left: 239px;" /></span></a>
+       <p style="border-bottom: 1px solid lightgrey; margin-top: 1.5px; width: 91%; margin-left: 16px;"></p>
+    <a href="#contact" style="padding: 6px 13px; font-size: 14px;">PDF TOOLS</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="margin-top: 9px;">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+</div>
+
+           <script>
+             function myFunction() {
+               var x = document.getElementById("myLinks");
+             if (x.style.display === "block") {
+              x.style.display = "none";
+              } else {
+                 x.style.display = "block";
+                 }
+                }
+</script>
+        </nav>
+       <main>
+         <div class="back-col">
+          <h3>OUR TOOLS</h3>
+       <section>
+            <div class="btns-1">
+              <div class="btn-1">
+           <button>
+               <img src="assets/img/1.PNG" />
+                <h5> Tags Generator </h5>
+                     </button>
+                  </div>
+           <div class="btn-2">
+           <button>
+                <img src="assets/img/2.PNG" />
+                  <h5>  Slug Generator </h5>
+                     </button>
+              </div>
+            <div class="btn-3">
+           <button> 
+                  <img src="assets/img/3.PNG" />
+                    <h5> Meta Tags Generator </h5>
+                     </button>
+             </div>
+             <div class="btn-4">
+           <button>
+                  <img src="assets/img/4.PNG" />
+                  <h5>  Robots.txt Generator </h5>
+                     </button>
+                </div>
+              </div>
+              <div class="btns-2">
+             <div class="btn-5">
+           <button>
+                   <img src="assets/img/5.PNG" />
+                  <h5> MD5 Generator </h5>
+                     </button>
+               </div>
+               <div class="btn-6">
+           <button>
+                    <img src="assets/img/6.PNG" />
+                   <h5>  Bcrypt Generator </h5>
+                    </button>
+                  </div>
+                <div class="btn-7">
+           <button>
+                    <img src="assets/img/7.PNG" />
+                    <h5> QR Code Generator </h5>
+                    </button>
+                 </div>
+               <div class="btn-8">
+           <button>
+                    <img src="assets/img/8.PNG" />
+                   <h5>  Title Generator </h5>
+                    </button>
+                    </div>
+                  </div>
+                <div class="btn-9">
+           <button>
+                    <img src="assets/img/9.PNG" />
+                    <h5> Keywords Generator </h5>
+                     </button>
+                   </div>
+                 </div>
+        </section>
+         </div>
+       </main>
+    
+
+       <main style="margin-top: -19px;">
+         <div class="back-col-2">
+          <h3>BUSINESS CALCULATOR</h3>
+       <section>
+            <div class="btns-1-2">
+              <div class="btn-1-2">
+           <button>
+               <img src="assets/img/10.PNG" />
+                <h5> Mortgage Calculator </h5>
+                     </button>
+                  </div>
+           <div class="btn-2-2">
+           <button>
+                <img src="assets/img/11.PNG" />
+                  <h5>  Millionaire Calculator </h5>
+                     </button>
+              </div>
+            <div class="btn-3-2">
+           <button> 
+                  <img src="assets/img/12.PNG" />
+                    <h5> Savings Calculator </h5>
+                     </button>
+             </div>
+             <div class="btn-4-2">
+           <button>
+                  <img src="assets/img/13.PNG" />
+                  <h5>  Breakeven Calculator </h5>
+                     </button>
+                </div>
+              </div>
+              <div class="btns-2-2">
+             <div class="btn-5-2">
+           <button>
+                   <img src="assets/img/14.PNG" />
+                  <h5> How To Make More..  </h5>
+                     </button>
+               </div>
+               <div class="btn-6-2">
+           <button>
+                    <img src="assets/img/15.PNG" />
+                   <h5>  Customer Lifetime..  </h5>
+                    </button>
+                  </div>
+                <div class="btn-7-2">
+           <button>
+                    <img src="assets/img/16.PNG" />
+                    <h5> Marketing Campaign..  </h5>
+                    </button>
+                 </div>
+               <div class="btn-8-2">
+           <button>
+                    <img src="assets/img/17.PNG" />
+                   <h5>  Mark Up to Gross Profit..  </h5>
+                    </button>
+                    </div>
+                  </div>
+                <div class="btn-9-2">
+           <button>
+                    <img src="assets/img/18.PNG" />
+                    <h5> Gross Profit Calculator </h5>
+                     </button>
+                   </div>
+                 </div>
+        </section>
+         </div>
+       </main>
+
+
+     <main style="margin-top: -19px;">
+         <div class="back-col-3">
+          <h3>TAX CALCULATOR</h3>
+       <section>
+            <div class="btns-1-3">
+              <div class="btn-1-3">
+           <button>
+               <img src="assets/img/19.PNG" />
+                <h5> Payroll Calculator </h5>
+                     </button>
+                  </div>
+           <div class="btn-2-3">
+           <button>
+                <img src="assets/img/20.PNG" />
+                  <h5>  Car and Fuel Benefits </h5>
+                     </button>
+              </div>
+            <div class="btn-3-3">
+           <button style="height: 119px;"> 
+                  <img src="assets/img/21.PNG" />
+                    <h5> CIS Tax Deduction.. </h5>
+                     </button>
+             </div>
+             <div class="btn-4-3">
+           <button>
+                  <img src="assets/img/22.PNG" />
+                  <h5>  Fuel Cost Calculator </h5>
+                     </button>
+                </div>
+              </div>
+       <div class="btn-9-3">
+           <button style="margin-left: 716px; margin-top: -17px;">
+                    <img src="assets/img/23.PNG" />
+                    <h5> Incorporation.. </h5>
+                     </button>
+                   </div>   
+              <div class="btns-2-3">
+             <div class="btn-5-3">
+           <button style="height: 119px;">
+                   <img src="assets/img/24.PNG" />
+                  <h5> Inheritance.. </h5>
+                     </button>
+               </div>
+               <div class="btn-6-3">
+           <button>
+                    <img src="assets/img/25.PNG" />
+                   <h5> VAT Calculator </h5>
+                    </button>
+                  </div>
+                <div class="btn-7-3">
+           <button style="height: 119px;">
+                    <img src="assets/img/26.PNG" />
+                    <h5> Capital Gains Tax.. </h5>
+                    </button>
+                 </div>
+               <div class="btn-8-3">
+           <button style="height: 119px;">
+                    <img src="assets/img/27.PNG" />
+                   <h5> VAT Flat Rate Scheme.. </h5>
+                    </button>
+                    </div>
+                  </div>
+               
+                 </div>
+        </section>
+         </div>
+       </main>
+
+        
+         <main style="margin-top: -19px;">
+         <div class="back-col-4">
+          <h3>MATH CALCULATORS</h3>
+       <section>
+            <div class="btns-1-4">
+              <div class="btn-1-4">
+           <button>
+               <img src="assets/img/28.PNG" />
+                <h5> Scientific Calculator </h5>
+                     </button>
+                  </div>
+           <div class="btn-2-4">
+           <button>
+                <img src="assets/img/29.PNG" />
+                  <h5>  Fraction Calculator </h5>
+                     </button>
+              </div>
+            <div class="btn-3-4">
+           <button> 
+                  <img src="assets/img/30.PNG" />
+                    <h5> Percentage Calculator </h5>
+                     </button>
+             </div>
+             <div class="btn-4-4">
+           <button style="height: 119px;">
+                  <img src="assets/img/31.PNG" />
+                  <h5>  Random Number.. </h5>
+                     </button>
+                </div>
+              </div>
+              <div class="btns-2-4">
+             <div class="btn-5-4">
+           <button>
+                   <img src="assets/img/32.PNG" />
+                  <h5> Triangle Calculator </h5>
+                     </button>
+               </div>
+               <div class="btn-6-4">
+           <button style="height: 119px;">
+                    <img src="assets/img/33.PNG" />
+                   <h5>  Standard Deviation.. </h5>
+                    </button>
+                  </div>
+               </div> 
+           </div>
+        </section>
+         </div>
+       </main>
+
+
+        <main style="margin-top: -19px;">
+         <div class="back-col-5">
+          <h3>OTHER TOOLS</h3>
+       <section>
+            <div class="btns-1-5">
+              <div class="btn-1-5">
+           <button>
+               <img src="assets/img/34.PNG" />
+                <h5> Color From Image </h5>
+                     </button>
+                  </div>
+           <div class="btn-2-5">
+           <button>
+                <img src="assets/img/35.PNG" />
+                  <h5>  Passward Generator </h5>
+                     </button>
+              </div>
+            <div class="btn-3-5">
+           <button> 
+                  <img src="assets/img/36.PNG" />
+                    <h5> Barcode Generator </h5>
+                     </button>
+             </div>
+             <div class="btn-4-5">
+           <button>
+                  <img src="assets/img/37.PNG" />
+                  <h5>  Extract Zip File</h5>
+                     </button>
+                </div>
+              </div>
+              <div class="btns-2-5">
+             <div class="btn-5-5">
+           <button>
+                   <img src="assets/img/38.PNG" />
+                  <h5> Zip File Generator  </h5>
+                     </button>
+               </div>
+               <div class="btn-6-5">
+           <button>
+                    <img src="assets/img/39.PNG" />
+                   <h5>  GIF To Image  Generator </h5>
+                    </button>
+                  </div>
+                <div class="btn-7-5">
+           <button>
+                    <img src="assets/img/40.PNG" />
+                   <h5>  GIF Make  Generator </h5>
+                    </button>
+                  </div>
+                 </div>
+           </div>
+        </section>
+         </div>
+       </main>
+
+
+      <main style="margin-top: -19px;">
+         <div class="back-col-6">
+          <h3>EDIT IMAGES</h3>
+       <section>
+            <div class="btns-1-6">
+              <div class="btn-1-6">
+           <button>
+               <img src="assets/img/41.PNG" />
+                <h5> Image Rotate.. </h5>
+                     </button>
+                  </div>
+           <div class="btn-2-6">
+           <button>
+                <img src="assets/img/42.PNG" />
+                  <h5>  Image Crop Generator </h5>
+                     </button>
+              </div>
+            <div class="btn-3-6">
+           <button> 
+                  <img src="assets/img/43.PNG" />
+                    <h5> Image Resize  Generator </h5>
+                     </button>
+             </div>
+             <div class="btn-4-6">
+           <button>
+                  <img src="assets/img/44.PNG" />
+                  <h5>  Image Crop Circle.. </h5>
+                     </button>
+                </div>
+              </div>
+              <div class="btns-2-6">
+             <div class="btn-5-6">
+           <button>
+                   <img src="assets/img/45.PNG" />
+                  <h5> Image To JPG.. </h5>
+                     </button>
+               </div>
+               <div class="btn-6-6">
+           <button>
+                    <img src="assets/img/46.PNG" />
+                   <h5>  Compress PNG.. </h5>
+                    </button>
+                  </div>
+                <div class="btn-7-6">
+           <button>
+                    <img src="assets/img/46.PNG" />
+                    <h5> Compress JPG.. </h5>
+                    </button>
+                 </div>
+               <div class="btn-8-6">
+           <button>
+                    <img src="assets/img/46.PNG" />
+                   <h5>  Compress JPEG.. </h5>
+                    </button>
+                    </div>
+                  </div>
+                 <div class="btns-3-6">
+                <div class="btn-9-6">
+           <button>
+                    <img src="assets/img/46.PNG" />
+                    <h5> Compress WEBP.. </h5>
+                     </button>
+                   </div>
+                <div class="btn-10-6">
+           <button>
+                    <img src="assets/img/46.PNG" />
+                    <h5> Compress BMP.. </h5>
+                     </button>
+                    </div>
+                   </div>
+                 </div>
+        </section>
+         </div>
+       </main>
+
+
+         <main style="margin-top: -19px;">
+         <div class="back-col-7">
+          <h3>PGF TOOLS</h3>
+       <section>
+            <div class="btns-1-7">
+              <div class="btn-1-7">
+           <button>
+               <img src="assets/img/47.PNG" />
+                <h5> PDF To JPG </h5>
+                     </button>
+                  </div>
+           <div class="btn-2-7">
+           <button>
+                <img src="assets/img/47.PNG" />
+                  <h5>  PDF To PNG </h5>
+                     </button>
+              </div>
+            <div class="btn-3-7">
+           <button> 
+                  <img src="assets/img/47.PNG" />
+                    <h5> PGF To WORD </h5>
+                     </button>
+             </div>
+             <div class="btn-4-7">
+           <button>
+                  <img src="assets/img/47.PNG" />
+                  <h5>  PDF To PowerPoint </h5>
+                     </button>
+                </div>
+              </div>
+              <div class="btns-2-7">
+             <div class="btn-5-7">
+           <button>
+                   <img src="assets/img/47.PNG" />
+                  <h5> PDF To Excel </h5>
+                     </button>
+               </div>
+               <div class="btn-6-7">
+           <button>
+                    <img src="assets/img/47.PNG" />
+                   <h5>  PGF To TXT </h5>
+                    </button>
+                  </div>
+                <div class="btn-7-7">
+           <button>
+                    <img src="assets/img/48.PNG" />
+                    <h5> Image To PDF </h5>
+                    </button>
+                 </div>
+               <div class="btn-8-7">
+           <button>
+                    <img src="assets/img/48.PNG" />
+                   <h5>  Word To PDF </h5>
+                    </button>
+                    </div>
+                  </div>
+                 <div class="btns-3-7">
+                <div class="btn-9-7">
+           <button>
+                    <img src="assets/img/48.PNG" />
+                    <h5> PowerPoint To PDf </h5>
+                     </button>
+                   </div>
+                <div class="btn-10-7">
+           <button>
+                    <img src="assets/img/48.PNG" />
+                    <h5> Excel To PDF </h5>
+                     </button>
+                    </div>
+                 <div class="btn-11-7">
+           <button>
+                    <img src="assets/img/48.PNG" />
+                    <h5> Text To PDF </h5>
+                     </button>
+                    </div>
+                   </div>
+                 </div>
+        </section>
+         </div>
+       </main>
+
+
+         <main style="margin-top: -19px;">
+         <div class="back-col-8">
+          <h3>HEALTH AND FITNESS CALCULATORS</h3>
+       <section>
+            <div class="btns-1-8">
+              <div class="btn-1-8">
+           <button>
+               <img src="assets/img/49.PNG" />
+                <h5> BMI Calculator </h5>
+                     </button>
+                  </div>
+           <div class="btn-2-8">
+           <button>
+                <img src="assets/img/50.PNG" />
+                  <h5>  Calorie Calculator </h5>
+                     </button>
+              </div>
+            <div class="btn-3-8">
+           <button> 
+                  <img src="assets/img/51.PNG" />
+                    <h5> Body Fat Calculator </h5>
+                     </button>
+             </div>
+             <div class="btn-4-8">
+           <button>
+                  <img src="assets/img/52.PNG" />
+                  <h5>  BMR Calculator </h5>
+                     </button>
+                </div>
+              </div>
+              <div class="btns-2-8">
+             <div class="btn-5-8">
+           <button>
+                   <img src="assets/img/53.PNG" />
+                  <h5> Ideal Weight Calculator </h5>
+                     </button>
+               </div>
+               <div class="btn-6-8">
+           <button>
+                    <img src="assets/img/54.PNG" />
+                   <h5>  Pace Calculator </h5>
+                    </button>
+                  </div>
+                <div class="btn-7-8">
+           <button>
+                    <img src="assets/img/55.PNG" />
+                    <h5> Pregnancy &.. </h5>
+                    </button>
+                 </div>
+                 </div>
+               </div>
+                 </div>
+        </section>
+         </div>
+       </main>
+
+
+         <main style="margin-top: -19px;">
+         <div class="back-col-9">
+          <h3>OTHER CALCULATOR</h3>
+       <section>
+            <div class="btns-1-9">
+              <div class="btn-1-9">
+           <button>
+               <img src="assets/img/56.PNG" />
+                <h5> Age Calculator </h5>
+                     </button>
+                  </div>
+           <div class="btn-2-9">
+           <button>
+                <img src="assets/img/57.PNG" />
+                  <h5> Date Calculator </h5>
+                     </button>
+              </div>
+            <div class="btn-3-9">
+           <button> 
+                  <img src="assets/img/58.PNG" />
+                    <h5> Time Calculator </h5>
+                     </button>
+             </div>
+             <div class="btn-4-9">
+           <button>
+                  <img src="assets/img/52.PNG" />
+                  <h5>  Hours Calculator </h5>
+                     </button>
+                </div>
+              </div>
+              <div class="btns-2-9">
+             <div class="btn-5-9">
+           <button>
+                   <img src="assets/img/53.PNG" />
+                  <h5> GPA Calculator </h5>
+                     </button>
+               </div>
+               <div class="btn-6-9">
+           <button>
+                    <img src="assets/img/54.PNG" />
+                   <h5>  Grade Calculator </h5>
+                    </button>
+                  </div>
+                <div class="btn-7-9">
+           <button>
+                    <img src="assets/img/59.PNG" />
+                    <h5> Concrete Calculator </h5>
+                    </button>
+                 </div>
+               <div class="btn-8-9">
+           <button>
+                    <img src="assets/img/60.PNG" />
+                   <h5>  IP Subnet Calculator </h5>
+                    </button>
+                    </div>
+                  </div>
+                <div class="btn-9-9">
+           <button>
+                    <img src="assets/img/61.PNG" />
+                    <h5> Conversion Calculator </h5>
+                     </button>
+                   </div>
+                 </div>
+        </section>
+         </div>
+       </main>
+
+
+
+       <footer>
+               <div class="foot-er">
+                <div class="m-l-1">
+              <img src="pro-free-2.WEBP" />
+               <p>
+                  We are a fully in-house 
+                  digital agency focusing on 
+                  branding, marketing, web 
+                  design and development 
+                  with clients ranging from 
+                  start-ups, Lorem ipsum dolor 
+                  sit amet, consectetur
+                  adipiscing elit. Sed varius 
+                  Quam ut magna ultricies 
+                  pellentesque.
+               </p>
+                </div>
+              <div class="m-l-2">
+               <ul>
+                   <li style="font-weight: 500;">USEFUL LINKS</li>
+                   <li><p></p></li>
+                   <li>About Us</li>
+                   <li>Contact Us</li>
+                   <li>Terms & <br> Conditions</li>
+                </ul>
+                   </div>
+                 <div class="m-l-2">
+               <ul>
+                   <li style="font-weight: 500;">BUSINESS <br> CALCULATOR</li>
+                   <li><p></p></li>
+                   <li>Millionaire <br> Calculator</li>
+                   <li>Savings Calculator</li>
+                   <li>Breakeven <br> Calculator</li>
+                   <li>Gross Profit <br> Calculator</li>
+                </ul>
+                 </div>
+
+                  <div class="m-l-2" style="width: 23%;">
+                <ul>
+                   <li style="font-weight: 500;">CONTACT US</li>
+                   <li><p></p></li>
+                   <li style="list-h"><img src="locat-2.PNG" style="width: 16px;" /><span style="margin-left: 7px;">Park lane Llandrindod  Wells, LD7 9QW <span></li> 
+                   <li style="list-h"><img src="mobile-phone.PNG" style="width: 16px;" /><span style="margin-left: 7px;">+44 1632 960290</span></li> 
+                  <li style="list-h"><img src="mail.PNG" style="width: 16px;" /><span style="margin-left: 7px;">helloscode@gmail.com</span></li> 
+                </ul>
+                   </div>                     
+
+                    <div class="m-l-2">
+                 <ul>
+                   <li style="font-weight: 500;">TERMS & POLICY</li>
+                   <li><p></p></li>
+                   <li>About</li>
+                   <li>Privacy Policy</li>
+                   <li>Terms & <br> 
+                      Conditions</li>
+                   <li>Contact Us</li>
+                </ul>
+                   </div>
+                  </div>
+
+
+                <div class="footer-end">
+                     <div class="star-f-e">
+                   <ul>
+                     <li><a href="#"><img src="linkedin.PNG" /></a></li>
+                     <li><a href="#"><img src="facebook-logo.PNG" /></a></li>
+                     <li><a href="#"><img src="twitter-2.PNG" /></a></li>
+                     <li><a href="#"><img src="pinterest.PNG" /></a></li>
+                     <li><a href="#"><img src="instagram.PNG" /></a> </li>
+                 </div>
+                     <div class="end-f-e">
+                     <p>  © 2023 Pro Free Tools. All rights reserved Developed by </p>
+                     <div class="w-134"> <p style="color: #ffca2a;">ZotectSoft</p> </div>
+
+                         </div>
+                </div>
+       </footer>
+</body>
+</html>
